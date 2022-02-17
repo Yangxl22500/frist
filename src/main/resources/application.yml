@@ -3,6 +3,11 @@ server:
   port: 8081
 
 spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/frist
+    username: root
+    password: root
   mvc:
     favicon:
       # 禁用默认spring图标
@@ -11,6 +16,7 @@ spring:
   thymeleaf:
     cache: false
     enabled: true
+
 #shiro的配置
 #shiro:
 #  hash-algorithm-name: md5
@@ -25,3 +31,6 @@ spring:
 #  log-out-url: /login/logout*
 #  authc-ulrs:
 #    - /**
+mybatis:
+  mapper-locations: classpath:com/yang/frist/mapper/*Mapper.xml
+  type-aliases-package: com.yang.frist.entity
